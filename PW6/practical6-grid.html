@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; 
+            }
+            .text {
+                text-align: center;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .image {
+                display: none;
+            }
+            .news-excerpt {
+                display: none; 
+            }
+        }
+        body {
+            background-color: #f9f0f4;
+
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f9f0f4;
+            font-family: "Julius Sans One", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            padding-bottom: 20px;
+        }
+        .left {
+            float: left;
+            padding-left: 120px;
+        }
+        li a {
+            display: block;
+            color: #664c55;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #e2d4da;
+        }
+        p {
+            text-align: center;
+        }
+        body, html {
+        height: 100%;
+        }
+        .container {
+            display: flex;
+            align-items: center; 
+            background-color: rgba(235, 220, 226, 1);
+        }
+        .image {
+            flex: 1;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text {
+            flex: 2; 
+            color: #664c55;
+            font-family: "Julius Sans One", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            text-align: center;
+        }
+        button {
+            background-color: #ebdce2;
+            border-radius: 6px; 
+            font-size: 20px;
+            border: 2px solid #664c55;
+            color: #664c55;
+            padding: 10px;
+        }
+        h2 {
+            padding: 10px;
+            font-family: "Julius Sans One", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            text-align: center;
+            color:#664c55;
+        }
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; 
+        }
+
+        .news-item {
+            flex: 1; 
+            max-width: 300px; 
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .news-heading {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .news-meta {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .news-excerpt {
+            margin-top: 10px;
+        }
+
+        .read-more {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <img src="logo.png" alt="Logo" width="170" height="50">
+    </p>
+    <ul class="navigation">
+        <li class="left"><a class="active" href="#a">Shop All</a></li>
+        <li class="left"><a href="#b">Sale</a></li>
+        <li class="left"><a href="#c">Skincare</a></li>
+        <li class="left"><a href="#d">Makeup</a></li>
+        <li class="left"><a href="#e">Hair</a></li>
+        <li class="left"><a href="#f">Bestsellers</a></li>
+      </ul>
+      <div class="container">
+        <div class="text">
+            <h1>Bloom into your own kind of beautiful</h1>
+            <button>Shop now</button>
+        </div>
+        <div class="image">
+            <img src="pic2.jpg" alt="Image description" style="float: right;">
+        </div>
+    </div>
+    <h2>New arrivals</h2>
+    <div class="news-container">
+        <div class="news-item">
+            <img src="cleansing.png" alt="News 1" class="news-image">
+            <h2 class="news-heading">BLOOM floral cleansing gel</h2>
+            <p class="news-meta">150 ML</p>
+            <p class="news-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="read-more">
+                <a href="#" style="color:#664c55">Add to bag</a>
+            </div>
+        </div>
+        <div class="news-item">
+            <img src="cream.png" alt="News 1" class="news-image">
+            <h2 class="news-heading">BLOOM brightening face cream </h2>
+            <p class="news-meta">30 ML</p>
+            <p class="news-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="read-more">
+                <a href="#" style="color:#664c55">Add to bag</a>
+            </div>
+        </div>
+        <div class="news-item">
+            <img src="lip.png" alt="News 1" class="news-image">
+            <h2 class="news-heading">BLOOM matte lipstick</h2>
+            <p class="news-meta">10g</p>
+            <p class="news-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="read-more">
+                <a href="#" style="color: #664c55;">Add to bag</a>
+            </div>
+        </div>
+        <div class="news-item">
+            <img src="Cream2.png" alt="News 1" class="news-image">
+            <h2 class="news-heading">BLOOM body cream</h2>
+            <p class="news-meta">150 ML</p>
+            <p class="news-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="read-more">
+                <a href="#" style="color: #664c55;">Add to bag</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

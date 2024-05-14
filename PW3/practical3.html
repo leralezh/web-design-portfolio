@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+       body {
+         background-color: #f2f1ff;
+       }
+       li.dotted {
+        padding: 10px 10px 0px 10px;
+        border-style: dotted;
+       }
+       li.double {
+        margin-top: 10px;
+        padding: 10px 10px 0px 10px;
+        border-style: double;
+       }
+       li.ridge {
+        margin-top: 10px;
+        padding: 10px 10px 0px 10px;
+        border-style: ridge;
+       }
+       li.inset {
+        margin-top: 10px;
+        padding: 10px 10px 0px 10px;
+        border-style: inset;
+       }
+       p.p1 {
+        background-color: #ff6347; 
+       }
+       p.p2 {
+        background-color: rgba(173, 216, 230, 0.6); 
+       }
+       p.p3 {
+        background: linear-gradient(to right, #ffcc00, #ff6699); 
+       }
+       p.p4 {
+        background: repeating-linear-gradient(45deg,#606dbc,#606dbc 10px,#465298 10px,#465298 20px); 
+       }
+       p.p5 {
+        background-image: url("czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjgtMDAzMC1rczA0dXNjcy5qcGc.webp"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       p.p6 {
+       background-image: url("czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjgtMDAzMC1rczA0dXNjcy5qcGc.webp"), url("49048260-583c-4945-a120-1df8c88e28ed.jpg");
+       background-repeat: repeat;
+       background-position: right bottom, left top;
+       background-size: 50% 50%, 100% 100%;
+       background-blend-mode: multiply; 
+      } 
+    </style>
+</head>
+<body>
+    <h1>Report</h1>
+    <ol>
+        <li class="dotted">
+            <dl>
+            <dt>
+                <b>Research for and describe the ways to open developers console in Mozilla Firefox and 
+                Safari.</b>
+            </dt>
+            <p>
+                <dd>
+                <ul>To open the developer console in Mozilla Firefox, you can:
+                    <li>Use the keyboard shortcut Ctrl + Shift + J (or Cmd + Shift + J on a Mac).</li>
+                    <li>Select “Browser Console” from the Browser Tools submenu in the Firefox Menu (or Tools menu if you display the menu bar or are on macOS).</li>
+                </ul>
+                </dd>
+            </p>
+           </dl>
+        </li>
+        <li class="double">
+            <dl> 
+                <dt>
+                    <b>
+                        What way of including internal links into the HTML page you would consider generally 
+                        preferable: absolute or relative links? Describe use cases for choosing absolute links and 
+                        choosing relative links.
+                    </b>
+                </dt>
+                <p>
+                    <dd>
+                        <ul>
+                            <li>Regarding internal links in HTML, <strong>relative links</strong> are generally preferable because they are shorter and make the document more portable. They are useful when moving the site to a different domain or when using the same code across multiple environments</li>
+                            <li><strong>Absolute links</strong> are better when you want to ensure the link will work regardless of the file structure, such as when linking to resources on a different domain or server.</li>
+                        </ul>
+                    </dd>
+                </p>
+            </dl>
+        </li>
+        <li class="ridge">
+            <dl> 
+                <dt>
+                    <b>
+                        Research and write about image formats used in web-development. What is the 
+                        difference between JPG, GIF and PNG formats? What is WEBP image type? What is SVG?
+                    </b>
+                </dt>
+                <p>
+                    <dd>
+                        <ul>In web development, the common image formats are:
+                            <li><b>JPG:</b> Good for photographs and images with gradients. It uses lossy compression, which reduces file size but can affect quality.</li>
+                            <li><b>GIF:</b> Supports animation and is suitable for simple graphics with solid colors. It uses lossless compression but is limited to 256 colors.</li>
+                            <li><b>PNG:</b> Ideal for images that require transparency or have text and objects with sharp edges. It uses lossless compression and supports more colors than GIF.</li>
+                            <li><b>WEBP:</b> A modern format that provides superior lossless and lossy compression for images on the web.</li>
+                            <li><b>SVG:</b>A vector image format used for icons, logos, and illustrations. It remains crisp at any resolution or size and supports animation and interactivity.</li>
+                        </ul>
+                    </dd>
+                </p>
+            </dl>
+        </li>
+        <li class="inset"> <b>CSS property "display: none"</b>
+            <p><img src="css-tricks.com_.png" width="500px" height="180px" alt="Logo"></p>
+        </li>
+    </ol>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="p2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="p3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="p4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p class="p5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="p6">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra.</p>
+</body>
+</html>

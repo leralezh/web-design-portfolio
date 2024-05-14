@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #effafa;
+            font-size: 21px;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer {
+            background-color: #93b8b8;
+            color: white;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #93b8b8;
+        }
+        .left {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #748a8a;
+        }
+    </style>
+</head>
+<body>
+        <ul class="navigation">
+            <li class="left"><a class="active" href="#a">Task a.</a></li>
+            <li class="left"><a href="#b">Task b.</a></li>
+            <li class="left"><a href="#c">Task c.</a></li>
+            <li class="left"><a href="#d">Task d.</a></li>
+            <li class="left"><a href="#e">Task e.</a></li>
+        </ul>
+    <dl>
+        <dt id="a"><b>a.</b> What is a box model in CSS. Give box-sizing property definition</dt>
+        <dd>
+            <p><b>Box Model in CSS:</b></p>
+            <ul>
+                <li>The box model wraps around every HTML element and consists of content, padding, borders, and margins.</li>
+                <li><em>box-sizing</em> property defines how the total width and height of an element is calculated:
+                    <ul>
+                        <li><em>content-box:</em> Width and height include only content (default).</li>
+                        <li><em>border-box: </em>Width and height include content, padding, and border.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Here're some pictures for better understanding of the box model in css:</p>
+            <div class="container"><img src="1_E_YuB8x1B3T3h6PIJ_I9qQ.png" alt="boxmodel" style="float: right; width: 400px; height: 300px; padding-right: 30px;"></div>
+            <div class="container"><img src="EdIoJ0CXoAA3scd.jpg" alt="boxmodel2" style="float: right; width: 400px; height: 300px; padding: 10px 30px 0px 0px;"></div>
+        </dd>
+        <dt id="b"><b>b.</b> What is a “clearfix hack” and when does it need to be applied</dt>
+        <dd>
+            <p><b>Clearfix Hack:</b></p>
+            <ul>
+                <li>It ensures floated elements don’t disrupt the layout.</li>
+                <li>Apply it to a container to contain floated child elements.</li>
+                <li>Common use case: When a header spans the entire container, ignoring padding.</li>
+            </ul>
+            <div class="container"><img src="1627296797-101156.png" alt="clearfixhack" style="float: right; width: 320px; height: 400px; padding-right: 30px;"></div>
+        </dd>
+        <dt id="c"><b>c.</b> What is a “margin collapse” and what are the use cases for margin: auto and negative margin values</dt>
+        <dd>
+            <p><b>Margin Collapse:</b></p>
+            <ul>
+                <li>Top and bottom margins of adjacent elements sometimes collapse into a single margin.</li>
+                <li>Use cases:
+                    <ul>
+                        <li>Negative margins: Adjust spacing or overlap elements.</li>
+                        <li><em>margin auto:</em> Center align elements horizontally.</li>
+                        <li>Negative margins can also fix layout issues.</li>
+                    </ul>
+                </li>
+            </ul>
+        </dd>
+        <dt id="d"><b>d.</b> What was the problem with achieving Holy Grail layout</dt>
+        <dd>
+            <p><b>Problem with Holy Grail Layout:</b></p>
+            <ul>
+                <li>Achieving a 3-column layout with a fixed-width center column and fluid side columns.</li>
+                <li>Difficult due to constraints on column order and equal-height columns.</li>
+            </ul>
+        </dd>
+        <dt id="e"><b>e.</b> What are the modern ways to achieve Holy Grail layout</dt>
+        <dd>
+            <p><b>Modern Ways for Holy Grail Layout:</b></p>
+            <ul>
+                 <li>Flexbox: Easier column alignment and equal heights.</li>
+                 <li>CSS Grid: Precise control over layout.</li>
+                 <li>CSS frameworks (e.g., Bootstrap) provide pre-built Holy Grail templates.</li>
+            </ul>
+            <p>How to create a holy grail website layout using CSS grid:</p>
+            <div class="container"><img src="gridhg_00-diagram.jpg" alt="holygrail" style="float: right; width: 400px; height: 300px; padding-right: 30px;"></div>
+            <p>Holy grail 3 column responsive layout (CSS Grid & Flexbox):</p>
+            <div class="container"><img src="holy-grail-3-column-responsive-layout-diagram.png" alt="holygrail2" style="float: right; width: 400px; height: 330px; padding: 10px 30px 0px 0px;"></div>
+        </dd>
+    </dl>
+    <footer>
+        <p>Lezhneva Valeria, 354 group</p>
+        <p>Web-design</p>
+        <p>22.04.2024</p>
+    </footer>
+</body>
+</html>

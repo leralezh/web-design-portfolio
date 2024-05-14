@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        // Define a function called "calculate" that takes three parameters:
+        // num1 (the first number), operator (the arithmetic operator), and num2 (the second number).
+        function calculate(num1, operator, num2) {
+        switch(operator) {
+        case '+':
+            // If the operator is '+', return the sum of num1 and num2.
+            return num1 + num2;
+        case '-':
+            // If the operator is '-', return the difference between num1 and num2.
+            return num1 - num2;
+        case '*':
+            // If the operator is '*', return the product of num1 and num2.
+            return num1 * num2;
+        case '/':
+            // If the operator is '/', check if num2 is not equal to zero.
+            if(num2 != 0) {
+                // If num2 is not zero, return the result of dividing num1 by num2.
+                return num1 / num2;
+            } else {
+                return "Error: Division by zero is not allowed.";
+                return NaN;
+            }
+        default:
+            return "Error: Invalid operator.";
+            return NaN;
+            }
+        }
+        do {
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var operator = prompt("Enter an operator (+, -, *, /):");
+            var num2 = parseFloat(prompt("Enter the second number:"));
+            var result = calculate(num1, operator, num2);
+            if(!isNaN(result)) {
+            alert("The result is: " + result);
+            }
+            var repeat = prompt("Do you want to perform another calculation? (yes/no)");
+        } while(repeat.toLowerCase() === 'yes');
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form id="calculator-form">
+        <label for="num1">Enter the first number:</label>
+        <input type="number" id="num1" name="num1" value="0"><br>
+
+        <label for="num2">Enter the second number:</label>
+        <input type="number" id="num2" name="num2" value="0"><br>
+
+        <label for="operator">Select an operation:</label>
+        <select id="operator" name="operator">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select><br>
+
+        <button type="button" onclick="performCalculation()">Calculate</button>
+
+        <button type="reset">Reset</button>
+
+        <output id="result"></output>
+    </form>
+
+    <script>
+        function performCalculation() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operator = document.getElementById('operator').value;
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Error: Division by zero is not allowed.");
+                    }
+                    break;
+                default:
+                    alert("Error: Invalid operator.");
+            }
+
+            if (!isNaN(result)) {
+                document.getElementById('result').textContent = `Result: ${result}`;
+            }
+        }
+    </script>
+    <hr>
+    <div id="answers-slider" class="owl-carousel">
+        <div class="item">
+            <ul>
+            1. Repaint and Reflow:
+                <li><b>Repaint:</b> Updates visual appearance without changing layout.</li>
+                <li><b>Reflow:</b> Recalculates layout due to DOM changes.</li>
+                <li>Both impact performance; minimize unnecessary changes</li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+            2. JavaScript and Performance:
+                    <li>Download time: Large JS files slow loading.</li>
+                    <li>Parsing and execution time: Optimize code.</li>
+                    <li>Blocking main thread: Use async techniques</li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+            3. Minification:
+                    <li>Removes unnecessary characters from JS code.</li>
+                    <li>Shortens variable names.</li>
+                    <li>Benefits: Faster loading, saves bandwidth.</li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul>
+            4. Web Workers:
+                    <li>Run JS in background threads.</li>
+                    <li>Perform tasks without blocking UI.</li>
+                    <li>Useful for heavy computations or async tasks.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#answers-slider").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000, 
+                nav: true,
+                dots: false
+            });
+        });
+    </script>
+</body>
+</html>
